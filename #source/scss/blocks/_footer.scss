@@ -25,9 +25,13 @@
       font-family: "Formular";
       font-weight: bold;
       font-style: normal;
-      @include adaptiv-font(32, 18);
-      line-height: 40px;
+      @include adaptiv-font(32, 14);
+      line-height: 24px;
       color: #00FA9A;
+
+      @media (min-width:$md3+px) {
+         line-height: 40px;
+      }
    }
 
    .action-block {
@@ -43,16 +47,26 @@
          padding: 16px;
          font-weight: bold;
          background-color: #00FA9A;
+
+         @media (max-width:$md3+px) {
+            padding-left: 0;
+            padding-right: 0;
+         }
       }
    }
 
    .section__content {
       background-color: #000;
+
+      @media (max-width:$md3+px) {
+         margin-bottom: 0;
+      }
    }
 
    .nav {
       margin-right: 0;
       margin-bottom: 24px;
+      padding: 0;
    }
 
    .nav__list {
@@ -60,7 +74,11 @@
    }
 
    .nav__item {
-      margin-right: 56px;
+
+
+      @media (min-width:$md3+px) {
+         margin-right: 56px;
+      }
 
       &:last-child {
          margin-right: 0;
@@ -73,5 +91,7 @@
       @include adaptiv-font(18, 12);
       color: #fff;
       line-height: 24px;
+
+
    }
 }

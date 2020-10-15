@@ -7,9 +7,9 @@ function sectors(scr) {
 	var w = $(window).outerWidth();
 	var h = $(window).outerHeight();
 	if (scr > 130) {
-		$('.header-middle').addClass('scroll');
+		$('.header').addClass('scroll');
 	} else {
-		$('.header-middle').removeClass('scroll');
+		$('.header').removeClass('scroll');
 	}
 }
 //====================  <!-- SCROLL --> ========================//
@@ -88,3 +88,4 @@ $('.section-slider').slick({
 	speed: 300,
 	arrows: false
 });
+

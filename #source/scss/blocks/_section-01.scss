@@ -1,27 +1,49 @@
 .section {
-   padding: 87px 0px 80px 0px;
+   padding: 37px 0px 37px 0px;
+
+   @media (min-width:$md3+px) {
+      padding: 87px 0px 80px 0px;
+   }
 
    .title {
-      margin-bottom: 48px;
+      margin-bottom: 24px;
 
-      span {
+      @media (min-width:$md3+px) {
+         margin-bottom: 48px;
+
+      }
+
+      &>span {
          background-color: #00FA9A;
       }
    }
 
    &-body {
-      display: flex;
-      flex-wrap: wrap;
+
+      @media (min-width:$md3+px) {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
    }
 
    &__column {}
 
    &__item {
-      flex: 0 1 27%;
-      width: 27%;
+      flex: 0 1 100%;
+      width: 100%;
       display: flex;
       margin-bottom: 48px;
-      margin-right: 66px;
+
+      @media (min-width:$md3+px) {
+         flex: 0 1 47%;
+         width: 47%;
+      }
+
+      @media (mminax-width:$md2+px) {
+         flex: 0 1 27%;
+         width: 27%;
+      }
 
       &:nth-child(2n+3) {
          margin-right: 0;
@@ -38,10 +60,19 @@
       font-family: Source Code Pro;
       font-weight: normal;
       @include adaptiv-font(18, 14);
-      line-height: 24px;
+      line-height: 16px;
+
+      @media (min-width:$md3+px) {
+         line-height: 24px;
+      }
    }
 }
 
 .section-01 {
-   padding-bottom: 37px;
+   border-bottom: 3px solid #000000;
+   padding-bottom: 17px;
+
+   @media (min-width:$md3+px) {
+      padding-bottom: 37px;
+   }
 }

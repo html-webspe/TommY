@@ -43,6 +43,14 @@
          background-image: url(../img/section-13/01.svg);
          width: 31px;
          height: 28px;
+
+         @media (max-width:$md3+px) {
+            right: 10px;
+         }
+      }
+
+      @media (max-width:$md3+px) {
+         padding-right: 60px;
       }
    }
 
@@ -50,5 +58,9 @@
       padding: 16px 16px 16px 50px;
       background-color: #fff;
       display: none;
+
+      @media (max-width:$md3+px) {
+         padding-left: 16px;
+      }
    }
 }

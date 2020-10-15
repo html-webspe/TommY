@@ -1,14 +1,19 @@
+.section-02 {
+   border-bottom: 3px solid #000000;
+}
+
 .section {
-   &__column {
-      flex: 0 1 50%;
-      width: 50%;
+   @media (min-width:$md3+px) {
+      &__column {
+         flex: 0 1 50%;
+         width: 50%;
+      }
+
+      &__column-content {
+         padding-right: 114px;
+      }
    }
 
-   &__column-content {
-      padding-right: 114px;
-   }
-
-   &__column-img {}
 
    &__text {
       font-weight: normal;

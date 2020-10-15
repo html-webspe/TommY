@@ -1,17 +1,28 @@
-.section-05 {}
+.section-05 {
+   .action-block {
+      @media (max-width:$md3+px) {
+         margin-bottom: 35px;
+      }
+   }
+}
 
 .section__package {
-
    width: 100%;
-   background-size: cover;
+   background-size: contain;
    background-repeat: no-repeat;
    background-position: left;
-   height: 105px;
-   line-height: 65px;
-   padding-left: 70px;
-   font-family: "Source Code Pro";
-   font-weight: normal;
+   height: 72px;
+   line-height: 44px;
+   padding-left: 28px;
    @include adaptiv-font(18, 12);
+
+   @media (min-width:$md3+px) {
+      width: 100%;
+      background-size: cover;
+      height: 105px;
+      line-height: 65px;
+      padding-left: 70px;
+   }
 
    span {
       font-family: "Formular";
@@ -23,10 +34,19 @@
 .section__list {
 
    font-weight: normal;
-   @include adaptiv-font(24, 12);
-   line-height: 32px;
-   margin-bottom: 90px;
+   @include adaptiv-font(24, 14);
+   line-height: 16px;
+   margin-bottom: 25px;
    padding-left: 22px;
+
+   @media (min-width:$md3+px) {
+      margin-bottom: 90px;
+   }
+
+   @media (min-width:$md3+px) {
+      line-height: 32px;
+
+   }
 
    li {
       list-style: disc;
@@ -40,7 +60,11 @@
 
 .section__package-bt {
    background-image: url(../img/section-05/01.png);
-   margin-bottom: 106px;
+   margin-bottom: 32px;
+
+   @media (min-width:$md3+px) {
+      margin-bottom: 106px;
+   }
 }
 
 .action-block {

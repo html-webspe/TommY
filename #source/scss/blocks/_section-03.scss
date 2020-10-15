@@ -9,9 +9,13 @@
 
 .body-item {
 
-   flex: 0 1 21%;
-   width: 21%;
+
    text-align: center;
+
+   @media (min-width:$md3+px) {
+      flex: 0 1 21%;
+      width: 21%;
+   }
 
    &:first-child {
       .body-item__step {
@@ -57,5 +61,20 @@
       font-weight: normal;
       @include adaptiv-font(24, 14);
       line-height: 24px;
+   }
+}
+
+.body-slider {
+   padding-bottom: 30px;
+
+   .slick-dots {
+      bottom: 0;
+      right: 50%;
+      margin-right: -25px;
+   }
+
+   .slick-dots li button {
+      width: 8px;
+      height: 8px;
    }
 }

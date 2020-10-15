@@ -3,11 +3,10 @@
 .intro {
 
    &__body {
-
-      display: flex;
-      justify-content: space-between;
-
-
+      @media (min-width:$md2+px) {
+         display: flex;
+         justify-content: space-between;
+      }
    }
 
    &__column {
@@ -21,16 +20,52 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      padding-left: 64px;
+      padding-left: 16px;
       position: relative;
+
+      @media (max-width:$md3+px) {
+         height: 192px;
+
+      }
+
+      @media (min-width:$md3+px) and (max-width:$md2+px) {
+         height: 320px;
+      }
+
+      @media (min-width:$md3+px) {
+         padding-left: 64px;
+      }
    }
 
    &__column-r {
-      padding: 40px 10px 56px 40px;
+
+      padding: 16px 16px 32px 16px;
+
+      @media (min-width:$md3+px) {
+         padding: 40px 10px 56px 40px;
+      }
    }
 
    &__column-icon {
-      margin-bottom: 73px;
+      margin-bottom: 16px;
+      width: 68px;
+      height: 67px;
+
+      @media (min-width:$md3+px) and (max-width:$md2+px) {
+         margin-bottom: 23px;
+
+      }
+
+      @media (min-width:$md3+px) {
+
+         width: 168px;
+         height: 167px;
+      }
+
+      @media (min-width:$md2+px) {
+
+         margin-bottom: 73px;
+      }
    }
 
    &__leble {
@@ -40,16 +75,21 @@
       text-align: center;
       font-family: "Formular";
       font-weight: bold;
-      font-size: 24px;
-
+      @include adaptiv-font(24, 14);
 
       color: #00FA9A;
       background: #000000;
       position: absolute;
-      width: 242px;
-      height: 80px;
-      top: 24px;
+      width: 130px;
+      height: 40px;
+      top: 0;
       left: 0;
+
+      @media (min-width:$md3+px) {
+         top: 24px;
+         height: 80px;
+         width: 242px;
+      }
    }
 
    &__column-r {
@@ -59,7 +99,11 @@
       p {
          @include adaptiv-font(18, 12);
          line-height: 24px;
-         margin-bottom: 40px;
+         margin-bottom: 8px;
+
+         @media (min-width:$md3+px) {
+            margin-bottom: 40px;
+         }
       }
    }
 
@@ -67,12 +111,31 @@
       display: flex;
       margin-bottom: 8px;
 
+      @media (max-width:$md3+px) {
+         flex-wrap: wrap;
+      }
+
       li {
          display: flex;
 
+         @media (max-width:$md3+px) {
+            margin-bottom: 8px;
+
+            &:last-child {
+               flex: 1 1 100%;
+               width: 100%;
+
+            }
+         }
+
          &:after {
             content: '/';
-            margin: 0px 15px 0px 15px;
+            margin: 0px 5px 0px 5px;
+
+            @media (min-width:$md2+px) {
+               margin: 0px 15px 0px 15px;
+
+            }
          }
 
          &:last-child {
@@ -100,7 +163,7 @@
          @include adaptiv-font(24, 14);
          line-height: 32px;
          margin-bottom: 10px;
-         text-transform: capitalize;
+         text-transform: capitalize !important;
       }
    }
 }
@@ -111,9 +174,12 @@
    font-family: "Formular";
    font-weight: bold;
    @include adaptiv-font(46, 24);
-   line-height: 56px;
+   line-height: 32px;
 
+   @media (min-width:$md2+px) {
+      line-height: 56px;
 
+   }
 }
 
 .section-intro {
@@ -126,16 +192,25 @@
 
          &:after {
             content: 'і';
-            font-size: 15px;
-            line-height: 24px;
+            font-size: 12px;
+            line-height: 16px;
             position: absolute;
             text-align: center;
-            top: 10px;
-            right: -32px;
-            width: 24px;
-            height: 24px;
+            top: 2px;
+            right: -22px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background: #00FA9A;
+
+            @media (min-width:$md3+px) {
+               width: 24px;
+               height: 24px;
+               line-height: 24px;
+               font-size: 15px;
+               top: 10px;
+               right: -32px;
+            }
          }
       }
    }
@@ -150,6 +225,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      @media (max-width:$md3+px) {
+         padding-top: 16px;
+      }
    }
 
    &__bottom-text {
@@ -159,5 +238,16 @@
       line-height: 64px;
       text-align: center;
       text-transform: capitalize;
+
+      @media (max-width:$md3+px) {
+         line-height: 16px;
+      }
+
+      span {
+         @media (max-width:$md3+px) {
+            display: block;
+
+         }
+      }
    }
 }
