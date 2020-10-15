@@ -16,12 +16,12 @@
    padding-left: 28px;
    @include adaptiv-font(18, 12);
 
-   @media (min-width:$md3+px) {
+   @media (min-width:$md2+px) {
       width: 100%;
-      background-size: cover;
-      height: 105px;
-      line-height: 65px;
+      height: 132px;
+      line-height: 75px;
       padding-left: 70px;
+
    }
 
    span {
@@ -56,11 +56,23 @@
 
 .section__package-tp {
    background-image: url(../img/section-05/02.png);
+
+   @media (min-width:$md4+px) and (max-width:$md2+px) {
+      background-size: 412px;
+      padding-left: 40px;
+      height: 88px;
+   }
 }
 
 .section__package-bt {
    background-image: url(../img/section-05/01.png);
    margin-bottom: 32px;
+
+   @media (min-width:$md4+px) and (max-width:$md2+px) {
+      background-size: 412px;
+      padding-left: 40px;
+      height: 88px;
+   }
 
    @media (min-width:$md3+px) {
       margin-bottom: 106px;
