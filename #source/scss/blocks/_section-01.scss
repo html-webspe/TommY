@@ -1,0 +1,47 @@
+.section {
+   padding: 87px 0px 80px 0px;
+
+   .title {
+      margin-bottom: 48px;
+
+      span {
+         background-color: #00FA9A;
+      }
+   }
+
+   &-body {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   &__column {}
+
+   &__item {
+      flex: 0 1 27%;
+      width: 27%;
+      display: flex;
+      margin-bottom: 48px;
+      margin-right: 66px;
+
+      &:nth-child(2n+3) {
+         margin-right: 0;
+      }
+
+   }
+
+   &__item-icon {
+      margin-right: 36px;
+   }
+
+   &__item-text {
+      padding-top: 5px;
+      font-family: Source Code Pro;
+      font-weight: normal;
+      @include adaptiv-font(18, 14);
+      line-height: 24px;
+   }
+}
+
+.section-01 {
+   padding-bottom: 37px;
+}

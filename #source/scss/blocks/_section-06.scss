@@ -1,0 +1,14 @@
+.section-06 {
+
+   .section__column-content {
+      padding: 0;
+   }
+
+   .section__text {
+      font-style: italic;
+      font-weight: normal;
+      line-height: 48px;
+      @include adaptiv-font(36, 22);
+      padding: 0px 0px 0px 25px;
+   }
+}

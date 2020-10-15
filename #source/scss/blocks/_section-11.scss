@@ -1,0 +1,36 @@
+.section-11 {
+   padding: 40px 0px 56px 0px;
+   background-image: url(../img/section-11/01-bg.png);
+   background-repeat: repeat;
+   background-position: center;
+
+
+   .container {
+      max-width: 770px;
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+   .action-block {
+      background-color: #000;
+      max-width: 661px;
+      margin: 0 auto;
+      color: #00FA9A;
+      text-align: center;
+      padding: 16px 32px;
+
+      p {
+         font-size: 14px;
+         max-width: 100%;
+      }
+   }
+}
+
+.section__content {
+   padding: 24px 16px;
+   background-color: #fff;
+   font-style: italic;
+   @include adaptiv-font(36, 20);
+   line-height: 40px;
+   text-align: center;
+}

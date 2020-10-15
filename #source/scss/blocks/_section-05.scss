@@ -1,0 +1,55 @@
+.section-05 {}
+
+.section__package {
+
+   width: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: left;
+   height: 105px;
+   line-height: 65px;
+   padding-left: 70px;
+   font-family: "Source Code Pro";
+   font-weight: normal;
+   @include adaptiv-font(18, 12);
+
+   span {
+      font-family: "Formular";
+      font-weight: bold;
+      @include adaptiv-font(32, 18);
+   }
+}
+
+.section__list {
+
+   font-weight: normal;
+   @include adaptiv-font(24, 12);
+   line-height: 32px;
+   margin-bottom: 90px;
+   padding-left: 22px;
+
+   li {
+      list-style: disc;
+      margin-bottom: 16px;
+   }
+}
+
+.section__package-tp {
+   background-image: url(../img/section-05/02.png);
+}
+
+.section__package-bt {
+   background-image: url(../img/section-05/01.png);
+   margin-bottom: 106px;
+}
+
+.action-block {
+   p {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      max-width: 416px;
+   }
+}

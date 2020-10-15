@@ -1,0 +1,77 @@
+.footer {
+   padding: 40px 0px 56px 0px;
+   background-image: url(../img/footer/01-bg.png);
+   background-repeat: repeat;
+   background-position: center;
+
+   .container {
+      max-width: 770px;
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+   &__brand {
+      margin-bottom: 24px;
+
+      a {
+         color: #fff;
+         @include adaptiv-font(48, 24);
+         text-transform: uppercase;
+         font-style: normal;
+      }
+   }
+
+   &__title {
+      font-family: "Formular";
+      font-weight: bold;
+      font-style: normal;
+      @include adaptiv-font(32, 18);
+      line-height: 40px;
+      color: #00FA9A;
+   }
+
+   .action-block {
+      background-color: transparent;
+      max-width: 661px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0;
+
+      p {
+         @include adaptiv-font(14, 12);
+         max-width: 100%;
+         padding: 16px;
+         font-weight: bold;
+         background-color: #00FA9A;
+      }
+   }
+
+   .section__content {
+      background-color: #000;
+   }
+
+   .nav {
+      margin-right: 0;
+      margin-bottom: 24px;
+   }
+
+   .nav__list {
+      justify-content: center;
+   }
+
+   .nav__item {
+      margin-right: 56px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   .nav__list {
+      font-family: "Source Code Pro";
+      font-weight: normal;
+      @include adaptiv-font(18, 12);
+      color: #fff;
+      line-height: 24px;
+   }
+}

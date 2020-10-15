@@ -1,0 +1,13 @@
+.section-12 {
+   .section__text {
+      margin-top: 48px;
+   }
+}
+
+.postitle {
+   font-style: italic;
+   font-weight: normal;
+   @include adaptiv-font(36, 20);
+   line-height: 36px;
+   background-color: #00FA9A;
+}

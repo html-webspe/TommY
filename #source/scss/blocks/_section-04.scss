@@ -1,0 +1,35 @@
+.section-04 {
+   border-bottom: none;
+   background: url(../img/section-04/04-bg.png) no-repeat 0 0;
+   padding-bottom: 144px;
+   background-size: cover;
+
+   .title {
+      max-width: 534px;
+      line-height: 49px;
+      margin-bottom: 48px;
+
+      span {
+         padding: 0px 5px 0px 5px;
+      }
+   }
+}
+
+.section-slider {
+   width: 558px;
+   height: 312px;
+   border: 6px solid #000;
+   background: #FFFFFF;
+}
+
+.title__wr {
+   padding: 5px;
+}
+
+.slider__text {
+   padding: 23px;
+   font-family: "Source Code Pro";
+   font-weight: normal;
+   @include adaptiv-font(24, 14);
+   line-height: 32px;
+}

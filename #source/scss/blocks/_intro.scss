@@ -1,0 +1,163 @@
+.section {}
+
+.intro {
+
+   &__body {
+
+      display: flex;
+      justify-content: space-between;
+
+
+   }
+
+   &__column {
+      flex: 1 1 50%;
+   }
+
+   &__column-l {
+      display: flex;
+      align-items: flex-end;
+      background-image: url(../img/intro-bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-left: 64px;
+      position: relative;
+   }
+
+   &__column-r {
+      padding: 40px 10px 56px 40px;
+   }
+
+   &__column-icon {
+      margin-bottom: 73px;
+   }
+
+   &__leble {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-family: "Formular";
+      font-weight: bold;
+      font-size: 24px;
+
+
+      color: #00FA9A;
+      background: #000000;
+      position: absolute;
+      width: 242px;
+      height: 80px;
+      top: 24px;
+      left: 0;
+   }
+
+   &__column-r {
+      font-family: "Source Code Pro";
+      font-weight: normal;
+
+      p {
+         @include adaptiv-font(18, 12);
+         line-height: 24px;
+         margin-bottom: 40px;
+      }
+   }
+
+   &__list {
+      display: flex;
+      margin-bottom: 8px;
+
+      li {
+         display: flex;
+
+         &:after {
+            content: '/';
+            margin: 0px 15px 0px 15px;
+         }
+
+         &:last-child {
+            margin-right: 0;
+
+            &:after {
+               content: '';
+               display: none;
+            }
+         }
+      }
+
+      a {
+         font-family: "Source Code Pro";
+         font-weight: normal;
+         @include adaptiv-font(18, 12);
+         line-height: 24px;
+      }
+   }
+
+   &__action {
+      p {
+         font-family: "Formular";
+         font-weight: bold;
+         @include adaptiv-font(24, 14);
+         line-height: 32px;
+         margin-bottom: 10px;
+         text-transform: capitalize;
+      }
+   }
+}
+
+
+
+.title {
+   font-family: "Formular";
+   font-weight: bold;
+   @include adaptiv-font(46, 24);
+   line-height: 56px;
+
+
+}
+
+.section-intro {
+
+   .title {
+      span {
+         @include adaptiv-font(32, 16);
+         position: relative;
+         display: inline-flex;
+
+         &:after {
+            content: 'і';
+            font-size: 15px;
+            line-height: 24px;
+            position: absolute;
+            text-align: center;
+            top: 10px;
+            right: -32px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #00FA9A;
+         }
+      }
+   }
+
+}
+
+.section {
+
+   &__bottom {
+      height: 64px;
+      background-image: url(../img/Fylh.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+
+   &__bottom-text {
+      font-family: "Formular";
+      font-weight: bold;
+      @include adaptiv-font(24, 14);
+      line-height: 64px;
+      text-align: center;
+      text-transform: capitalize;
+   }
+}

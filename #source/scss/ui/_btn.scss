@@ -1,0 +1,27 @@
+//<BUTTONS>====================================================================================================
+.btn {
+   display: inline-flex;
+   align-items: center;
+   padding: 0px 16px 0px 19px;
+   font-family: "Formular";
+   font-style: normal;
+   font-weight: bold;
+   @include adaptiv-font(24, 14);
+   height: 56px;
+   color: #000000;
+   background: #00FA9A;
+   margin-right: 30px;
+
+   &:hover {}
+
+
+   &.fw {
+      width: 100%;
+   }
+
+   i {
+      margin-right: 19px;
+   }
+}
+
+//</BUTTONS>====================================================================================================
