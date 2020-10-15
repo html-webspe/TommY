@@ -467,10 +467,10 @@ textarea.input {
       color: #fff; } }
   @media (max-width: 767.98px) and (max-width: 767.98px) {
     .nav__list {
-      font-size: calc(14px + 51*((100vw - 320px) / 1940)); } }
+      font-size: calc(18px + 44.2*((100vw - 320px) / 1940)); } }
   @media (max-width: 767.98px) and (min-width: 767.98px) {
     .nav__list {
-      font-size: calc(14px + 30*(100vw / 1940)); } }
+      font-size: calc(18px + 26*(100vw / 1940)); } }
 
 @media (max-width: 767.98px) {
   .header-menu {
@@ -1051,6 +1051,10 @@ font-family: "FontAwesome";
   @media (min-width: 767.98px) {
     .section__package {
       font-size: calc(12px + 6*(100vw / 1940)); } }
+  @media (min-width: 576.98px) and (max-width: 992.98px) {
+    .section__package {
+      padding-left: 30px;
+      height: 88px; } }
   @media (min-width: 992.98px) {
     .section__package {
       width: 100%;
@@ -1090,20 +1094,10 @@ font-family: "FontAwesome";
 
 .section__package-tp {
   background-image: url(../img/section-05/02.png); }
-  @media (min-width: 576.98px) and (max-width: 992.98px) {
-    .section__package-tp {
-      background-size: 412px;
-      padding-left: 40px;
-      height: 88px; } }
 
 .section__package-bt {
   background-image: url(../img/section-05/01.png);
   margin-bottom: 32px; }
-  @media (min-width: 576.98px) and (max-width: 992.98px) {
-    .section__package-bt {
-      background-size: 412px;
-      padding-left: 40px;
-      height: 88px; } }
   @media (min-width: 767.98px) {
     .section__package-bt {
       margin-bottom: 106px; } }

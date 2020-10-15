@@ -90,7 +90,7 @@
       color: #000000;
 
       @media (max-width:$md3+px) {
-         @include adaptiv-font(44, 14);
+         @include adaptiv-font(44, 18);
          color: #fff;
 
       }
