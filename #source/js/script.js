@@ -88,4 +88,35 @@ $('.section-slider').slick({
 	speed: 300,
 	arrows: false
 });
+$('.module-slider__body').slick({
+	appendArrows: '.module-slider__control',
+	nextArrow: '.control-module-slider__arrow-next',
+	prevArrow: '.control-module-slider__arrow-prev',
+	asNavFor: '.module-slider__body-r',
+	adaptiveHeight: true
+});
+$('.module-slider__body-r').slick({
+	asNavFor: '.module-slider__body',
+	arrows: false,
+	variableWidth: true,
 
+});
+/*
+$('.module-slider__body').slick({
+	appendArrows: '.module-slider__control',
+	nextArrow: '.control-module-slider__arrow-next',
+	prevArrow: '.control-module-slider__arrow-prev',
+	dots: true,
+	asNavFor: '.module-slider__body-1',
+	appendDots: $('.module-slider__dots'),
+	customPaging: function (slider, i) {
+		i++
+		return '<span class="module-slider__dots-dot">' + i + '</span>';
+	}
+});
+
+$('.module-slider__body-1').slick({
+	asNavFor: '.module-slider__body',
+	arrows: false,
+	adaptiveHeight: true
+});*/

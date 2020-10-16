@@ -1,0 +1,56 @@
+.section-07 {
+   padding-bottom: 0;
+}
+
+.item-slider__head {
+   font-family: "Formular";
+   font-weight: bold;
+   font-size: 32px;
+   line-height: 40px;
+   text-align: center;
+   margin-bottom: 40px;
+   padding: 0 40px;
+}
+
+.section__column {
+   position: relative;
+}
+
+.module-slider__body {
+   min-width: 0;
+}
+
+.control-module-slider__arrow {
+   position: absolute;
+   top: 5px;
+   cursor: pointer;
+
+   &-prev {
+      left: 0;
+   }
+
+   &-next {
+      right: 0;
+   }
+}
+
+.module-slider-r {
+   margin-left: 40px;
+}
+
+.module-slider__body-r {
+   display: flex;
+}
+
+.item-slider-r {
+   font-family: "Formular";
+   font-weight: bold;
+   font-size: 32px;
+   line-height: 72px;
+   width: 52px;
+   height: 72px;
+   background: #00FA9A;
+   margin-right: 16px;
+   text-align: center;
+   cursor: pointer;
+}
