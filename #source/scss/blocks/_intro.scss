@@ -240,8 +240,13 @@
       text-transform: capitalize;
 
       @media (max-width:$md3+px) {
+         line-height: 32px;
+      }
+
+      @media (max-width:$md4+px) {
          line-height: 16px;
       }
+
 
       span {
          @media (max-width:$md3+px) {

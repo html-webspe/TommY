@@ -1,15 +1,52 @@
 .section-07 {
    padding-bottom: 0;
+
+   @media (max-width:$md3+px) {
+      margin-bottom: 40px;
+   }
+
+   .section__list {
+      line-height: 22px;
+
+      @media (min-width:$md2+px) {
+         line-height: 40px;
+      }
+   }
+
+   .section__list li {
+      margin-bottom: 5px;
+
+      @media (min-width:$md2+px) {
+         margin-bottom: 15px;
+      }
+
+   }
 }
 
 .item-slider__head {
    font-family: "Formular";
    font-weight: bold;
-   font-size: 32px;
-   line-height: 40px;
+   @include adaptiv-font(32, 16);
+   line-height: 34px;
    text-align: center;
    margin-bottom: 40px;
    padding: 0 40px;
+
+   @media (min-width:$md2+px) {
+      line-height: 40px;
+   }
+}
+
+.module-slider__item {
+   li {
+      ul {
+         margin-left: 40px;
+
+         li {
+            list-style: circle;
+         }
+      }
+   }
 }
 
 .section__column {
@@ -36,6 +73,24 @@
 
 .module-slider-r {
    margin-left: 40px;
+
+   .slick-slider .slick-dots li button {
+      width: 52px;
+      height: 72px;
+      background: #00FA9A;
+      border-radius: inherit;
+
+   }
+
+   .slick-slider .slick-dots {
+      bottom: 0;
+      right: -59%;
+   }
+
+   .slick-active {
+      background: #000;
+      color: #fff;
+   }
 }
 
 .module-slider__body-r {
@@ -53,4 +108,11 @@
    margin-right: 16px;
    text-align: center;
    cursor: pointer;
+
+   @media (max-width:$md3+px) {
+      font-size: 14px;
+      line-height: 45px;
+      width: 24px;
+      height: 45px;
+   }
 }
