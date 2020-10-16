@@ -1123,7 +1123,7 @@ font-family: "FontAwesome";
   .section-06 .section__text {
     font-style: italic;
     font-weight: normal;
-    line-height: 24px;
+    line-height: 32px;
     padding: 0px; }
     @media (max-width: 767.98px) {
       .section-06 .section__text {
@@ -1191,6 +1191,10 @@ font-family: "FontAwesome";
 
 .module-slider-r {
   margin-left: 40px; }
+  @media (max-width: 576.98px) {
+    .module-slider-r {
+      margin-left: 44px;
+      margin-right: 44px; } }
   .module-slider-r .slick-slider .slick-dots li button {
     width: 52px;
     height: 72px;
@@ -1202,6 +1206,13 @@ font-family: "FontAwesome";
   .module-slider-r .slick-active {
     background: #000;
     color: #fff; }
+  .module-slider-r .module-slider__control {
+    display: none;
+    visibility: hidden; }
+    @media (max-width: 576.98px) {
+      .module-slider-r .module-slider__control {
+        display: block;
+        visibility: visible; } }
 
 .module-slider__body-r {
   display: -webkit-box;

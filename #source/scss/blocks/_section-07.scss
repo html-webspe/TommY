@@ -74,6 +74,11 @@
 .module-slider-r {
    margin-left: 40px;
 
+   @media (max-width:$md4+px) {
+      margin-left: 44px;
+      margin-right: 44px;
+   }
+
    .slick-slider .slick-dots li button {
       width: 52px;
       height: 72px;
@@ -91,10 +96,22 @@
       background: #000;
       color: #fff;
    }
+
+   .module-slider__control {
+      display: none;
+      visibility: hidden;
+
+      @media (max-width:$md4+px) {
+         display: block;
+         visibility: visible;
+      }
+   }
 }
 
 .module-slider__body-r {
    display: flex;
+
+
 }
 
 .item-slider-r {
