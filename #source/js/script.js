@@ -111,6 +111,11 @@ $('.module-slider__body-r').slick({
 	arrows: false,
 	variableWidth: true
 });
+
+$(".module-slider__body-r .item-slider-r").on("click", function () {
+	const index = $(this).attr("data-slick-index");
+	$(".module-slider__body-r").slick("slickGoTo", index);
+});
 /*
 $('.module-slider__body').slick({
 	appendArrows: '.module-slider__control',
