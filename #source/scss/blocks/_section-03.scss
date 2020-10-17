@@ -68,13 +68,37 @@
    padding-bottom: 30px;
 
    .slick-dots {
+      display: flex;
+      position: absolute;
       bottom: 0;
       right: 50%;
       margin-right: -25px;
    }
 
-   .slick-dots li button {
-      width: 8px;
-      height: 8px;
+   li {
+      margin-right: 10px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      button {
+         width: 8px;
+         height: 8px;
+         background: #00FA9A;
+         border-radius: 50%;
+         font-size: 0;
+
+         @media (min-width:$md3+px) {
+            width: 16px;
+            height: 16px;
+         }
+      }
+
+      &.slick-active {
+         button {
+            background: #000;
+         }
+      }
    }
 }

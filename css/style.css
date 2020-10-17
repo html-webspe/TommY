@@ -1015,12 +1015,29 @@ font-family: "FontAwesome";
 .body-slider {
   padding-bottom: 30px; }
   .body-slider .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
     bottom: 0;
     right: 50%;
     margin-right: -25px; }
-  .body-slider .slick-dots li button {
-    width: 8px;
-    height: 8px; }
+  .body-slider li {
+    margin-right: 10px; }
+    .body-slider li:last-child {
+      margin-right: 0; }
+    .body-slider li button {
+      width: 8px;
+      height: 8px;
+      background: #00FA9A;
+      border-radius: 50%;
+      font-size: 0; }
+      @media (min-width: 767.98px) {
+        .body-slider li button {
+          width: 16px;
+          height: 16px; } }
+    .body-slider li.slick-active button {
+      background: #000; }
 
 .slider-section__bg {
   height: 704px !important; }
