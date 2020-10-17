@@ -1,8 +1,10 @@
 .section-11 {
    padding: 40px 0px 56px 0px;
-   background-image: url(../img/section-11/01-bg.png);
-   background-repeat: repeat;
+   background-image: url(../img/section-11/01-bg.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
    background-position: center;
+   background-color: #00FA9A;
 
 
    .container {
@@ -27,7 +29,7 @@
          @media (min-width:$md3+px) {
             font-size: 14px;
             color: #00FA9A;
-            padding: 16px 32px;
+            padding: 16px;
          }
       }
    }

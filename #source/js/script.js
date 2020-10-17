@@ -87,11 +87,16 @@ counters.forEach(counter => {
 });
 //==================== <!-- Price-counter --> ========================//
 
-
-$('.section-slider').slick({
+$('.slider-section').slick({
+	arrows: false,
+	autoplay: true,
+	asNavFor: '.inside-slider'
+});
+$('.inside-slider').slick({
 	dots: true,
 	infinite: true,
 	speed: 300,
+	asNavFor: '.slider-section',
 	arrows: false
 });
 $('.module-slider__body').slick({
@@ -104,8 +109,7 @@ $('.module-slider__body').slick({
 $('.module-slider__body-r').slick({
 	asNavFor: '.module-slider__body',
 	arrows: false,
-	variableWidth: true,
-
+	variableWidth: true
 });
 /*
 $('.module-slider__body').slick({

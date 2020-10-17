@@ -110,6 +110,7 @@
    &__list {
       display: flex;
       margin-bottom: 8px;
+      @include adaptiv-font(18, 12);
 
       @media (max-width:$md3+px) {
          flex-wrap: wrap;
@@ -176,6 +177,10 @@
    @include adaptiv-font(46, 24);
    line-height: 32px;
 
+   @media (min-width:$md3+px) {
+      line-height: 48px;
+   }
+
    @media (min-width:$md2+px) {
       line-height: 56px;
 
@@ -185,6 +190,7 @@
 .section-intro {
 
    .title {
+
       span {
          @include adaptiv-font(32, 16);
          position: relative;
@@ -197,7 +203,8 @@
             line-height: 16px;
             position: absolute;
             text-align: center;
-            top: 2px;
+            top: 50%;
+            transform: translateY(-50%);
             right: -22px;
             width: 16px;
             height: 16px;
@@ -209,7 +216,6 @@
                height: 24px;
                line-height: 24px;
                font-size: 15px;
-               top: 10px;
                right: -32px;
             }
          }

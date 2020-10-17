@@ -1,5 +1,6 @@
 .section-07 {
    padding-bottom: 0;
+   border-bottom: 3px solid #000000;
 
    @media (max-width:$md3+px) {
       margin-bottom: 40px;
@@ -12,6 +13,7 @@
          line-height: 40px;
       }
    }
+
 
    .section__list li {
       margin-bottom: 5px;
@@ -75,10 +77,13 @@
 
 .module-slider-r {
    margin-left: 40px;
+   margin-top: -14px;
 
    @media (max-width:$md4+px) {
       margin-left: 44px;
       margin-right: 44px;
+
+      margin-top: 0;
    }
 
    .slick-slider .slick-dots li button {
