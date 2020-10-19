@@ -1,17 +1,12 @@
 .spollers {
-
-
-
    &__item {
-      border: 4px solid #000000;
       background-color: #fff;
-      border-bottom: none;
 
       &:last-child {
-         border: 4px solid #000000;
+         .spollers__title {
+            border: 4px solid #000000;
+         }
       }
-
-
    }
 
    &__title {
@@ -24,6 +19,10 @@
       position: relative;
       @include anim(0.3s, 0s);
       padding: 16px 56px 16px 16px;
+      border: 4px solid #000000;
+      border-bottom: none;
+
+
 
       &.active {
          color: #00FA9A;
@@ -76,4 +75,8 @@
          padding: 48px 112px;
       }
    }
+}
+
+.spoller.active+.spollers__text {
+   border: none;
 }
