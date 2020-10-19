@@ -8,6 +8,10 @@
       background-color: #fff;
    }
 
+   &__brand {
+      z-index: 100;
+   }
+
    &__body {
       height: 56px;
       display: flex;
@@ -17,6 +21,11 @@
       @media (min-width:$md2+px) {
          height: 96px;
       }
+   }
+
+   .action-block {
+      opacity: 0;
+      visibility: hidden;
    }
 }
 
@@ -48,13 +57,9 @@
       @include anim(0.3s, 0s);
       border-bottom: 2px solid transparent;
 
-
-
       &:hover {
          border-bottom: 2px solid #00FA9A;
       }
-
-
 
       @media (min-width:$md3+px) {
          margin-right: 50px;
@@ -69,7 +74,7 @@
       }
    }
 
-   &__list {
+   &__link {
       font-family: 'Formular';
       font-style: normal;
       font-weight: bold;
@@ -79,8 +84,6 @@
 
       @media (max-width:$md3+px) {
          @include adaptiv-font(44, 18);
-         color: #fff;
-
       }
    }
 }
@@ -90,7 +93,7 @@
       position: fixed;
       top: 0;
       right: -200%;
-      background-color: #000;
+      background-color: #fff;
       height: 100%;
       width: 100%;
       z-index: 99;
@@ -98,6 +101,24 @@
 
       &.active {
          right: 0;
+
+         .nav__link {
+            font-size: 24px;
+            line-height: 32px;
+         }
+
+         .nav__item {
+            margin-bottom: 40px;
+
+            &:last-child {
+               margin-bottom: 70px;
+            }
+         }
+
+         .action-block {
+            opacity: 1;
+            visibility: visible;
+         }
       }
 
       &__item {
@@ -146,7 +167,6 @@
       &.active {
          span {
             @include scale(0);
-            background-color: #fff;
 
             &:first-child {
                @include rotate(-45deg);

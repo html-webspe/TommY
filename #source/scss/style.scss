@@ -30,7 +30,7 @@ $md4: 576.98;
 body {
   color: #000;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 
   &.lock {
@@ -79,6 +79,8 @@ body {
 @import "ui/_up";
 
 
+@import "blocks/_action";
+
 @import "blocks/_header";
 @import "blocks/_intro";
 @import "blocks/_section-01";
@@ -94,6 +96,8 @@ body {
 @import "blocks/_section-11";
 @import "blocks/_section-12";
 @import "blocks/_section-13";
+@import "blocks/_footer";
+
 
 @import "blocks/_footer";
 @import "blocks/_popup";

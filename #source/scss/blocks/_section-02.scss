@@ -3,7 +3,8 @@
 }
 
 .section {
-   @media (min-width:$md3+px) {
+
+   @media (min-width:$md2+px) {
       &__column {
          flex: 0 1 50%;
          width: 50%;
@@ -14,14 +15,27 @@
       }
    }
 
-
    &__text {
       font-weight: normal;
       @include adaptiv-font(18, 14);
-      line-height: 24px;
+      line-height: 16px;
+
+      @media (min-width:$md3+px) {
+         line-height: 24px;
+      }
 
       span {
          background-color: #00FA9A;
+      }
+   }
+
+   &__column-img {
+      img {
+         margin-bottom: 26px;
+
+         @media (max-width:$md3+px) {
+            margin-bottom: 16px;
+         }
       }
    }
 }

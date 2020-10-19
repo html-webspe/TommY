@@ -1,17 +1,50 @@
 .footer {
-   padding: 40px 0px 56px 0px;
-   background-image: url(../img/footer/01-bg.png);
+   padding: 16px 0px 40px 0px;
+   background-image: url(../img/sec-bot.svg);
    background-repeat: repeat;
    background-position: center;
+   background-size: 12px;
+
+   @media (min-width:$md2+px) {
+      padding-top: 48px;
+   }
 
    .container {
       max-width: 770px;
       padding-left: 10px;
       padding-right: 10px;
+
+      @media (max-width:$md4+px) {
+         padding: 0;
+      }
    }
 
+   &__brand {
+      margin-bottom: 24px;
+   }
 
-   &__title {
+   .section__content {
+      background-color: #000;
+      max-width: 100%;
+      text-align: center;
+      padding: 32px 0px 32px 0px;
+
+      @media (max-width:$md3+px) {
+         margin: 0px 16px;
+      }
+   }
+
+   .action-block {
+      margin-bottom: 0;
+      text-align: center;
+
+      p {
+         background-color: #00FA9A;
+         padding: 8px 16px;
+      }
+   }
+
+   .footer__text {
       font-family: "Formular";
       font-weight: bold;
       font-style: normal;
@@ -24,39 +57,20 @@
       }
    }
 
-   .action-block {
-      background-color: transparent;
-      max-width: 661px;
-      margin: 0 auto;
-      text-align: center;
+   .nav {
       padding: 0;
 
-      p {
-         @include adaptiv-font(14, 12);
-         max-width: 100%;
-         padding: 16px;
-         font-weight: bold;
-         background-color: #00FA9A;
+      @media (min-width:$md3+px) {
+         text-align: center;
+      }
 
-         @media (max-width:$md3+px) {
-            padding-left: 0;
-            padding-right: 0;
+      li {
+         margin-bottom: 16px;
+
+         &:last-child {
+            margin-bottom: 24px;
          }
       }
-   }
-
-   .section__content {
-      background-color: #000;
-
-      @media (max-width:$md3+px) {
-         margin-bottom: 0;
-      }
-   }
-
-   .nav {
-      margin-right: 0;
-      margin-bottom: 24px;
-      padding: 0;
    }
 
    .nav__list {
@@ -70,18 +84,21 @@
          margin-right: 56px;
       }
 
+      @media (max-width:$md4+px) {
+         margin-bottom: 12px;
+      }
+
       &:last-child {
          margin-right: 0;
       }
    }
 
-   .nav__list {
+   .nav__link {
       font-family: "Source Code Pro";
       font-weight: normal;
-      @include adaptiv-font(18, 12);
+      @include adaptiv-font(18, 14);
       color: #fff;
       line-height: 24px;
-
-
    }
+
 }

@@ -1,10 +1,40 @@
 .section {
-   padding: 37px 0px 37px 0px;
+   position: relative;
+   padding: 48px 0px 48px 0px;
 
    @media (min-width:$md3+px) {
       padding: 87px 0px 80px 0px;
    }
+}
 
+.section-01 {
+   border-bottom: 3px solid #000000;
+   padding-bottom: 17px;
+
+   @media (min-width:$md3+px) {
+      padding-bottom: 37px;
+   }
+}
+
+.section-body {
+
+   @media (min-width:$md3+px) {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+
+   &__column {
+      width: 100%;
+      display: flex;
+
+      @media (max-width:$md2+px) {
+         flex-wrap: wrap;
+      }
+   }
+}
+
+.section {
    .title {
       margin-bottom: 24px;
 
@@ -18,31 +48,24 @@
       }
    }
 
-   &-body {
-
-      @media (min-width:$md3+px) {
-         display: flex;
-         flex-wrap: wrap;
-      }
-
-
-      &__column {
-         width: 100%;
-         display: flex;
-
-         @media (max-width:$md2+px) {
-            flex-wrap: wrap;
-         }
-      }
-   }
-
 
    &__item {
-      flex: 0 1 100%;
-      width: 100%;
       display: flex;
-      margin-bottom: 48px;
-      margin-right: 64px;
+      margin-bottom: 26px;
+
+      @media (min-width:$md3+px) {
+         flex: 0 1 50%;
+         width: 50%;
+         margin-bottom: 48px;
+         //margin-right: 64px;
+         padding-right: 30px;
+      }
+
+      @media (min-width:1200px) {
+         flex: 0 1 30%;
+         width: 30%;
+         padding-right: 60px;
+      }
 
       &:first-child {
          order: 1;
@@ -54,6 +77,10 @@
 
       &:nth-child(3) {
          order: 3;
+
+         @media (min-width:1200px) {
+            padding-right: 0;
+         }
       }
 
       &:nth-child(4) {
@@ -65,50 +92,36 @@
       }
 
       &:last-child {
-         margin-right: 0;
+
          order: 6;
       }
-
-      @media (min-width:$md3+px) {
-         flex: 0 1 42%;
-         width: 42%;
-      }
-
-      @media (min-width:$md2+px) {
-         flex: 0 1 30%;
-         width: 30%;
-      }
-
-
-
-      /*&:nth-child(2n+3) {
-         margin-right: 0;
-      }*/
-
    }
 
    &__item-icon {
-      margin-right: 36px;
+      margin-right: 16px;
+      flex: 0 0 64px;
+      width: 64px;
+
+      @media (min-width:$md4+px) {
+         margin-right: 36px;
+      }
+
+      @media (min-width:$md3+px) {
+         flex: 0 0 80px;
+         width: 80px;
+      }
+
    }
 
    &__item-text {
-      padding-top: 5px;
-      font-family: Source Code Pro;
+      font-family: "Source Code Pro";
       font-weight: normal;
       @include adaptiv-font(18, 14);
       line-height: 16px;
 
       @media (min-width:$md3+px) {
          line-height: 24px;
+         padding-top: 5px;
       }
-   }
-}
-
-.section-01 {
-   border-bottom: 3px solid #000000;
-   padding-bottom: 17px;
-
-   @media (min-width:$md3+px) {
-      padding-bottom: 37px;
    }
 }

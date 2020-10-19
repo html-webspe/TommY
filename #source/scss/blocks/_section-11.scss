@@ -1,17 +1,51 @@
 .section-11 {
-   padding: 40px 0px 56px 0px;
    background-image: url(../img/section-11/01-bg.svg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
    background-color: #00FA9A;
 
+   padding: 16px 0px 0px 0px;
+
+   @media (min-width:$md3+px) {
+      padding-top: 42px;
+      padding-bottom: 42px;
+   }
 
    .container {
       max-width: 770px;
       padding-left: 10px;
       padding-right: 10px;
+
+      @media (max-width:$md4+px) {
+         padding: 0;
+      }
    }
+
+
+   .section__content {
+      font-family: 'Source Code Pro', monospace;
+      font-style: italic;
+      @include adaptiv-font(36, 14);
+      line-height: 24px;
+      text-align: center;
+      background-color: #fff;
+      padding: 8px 5px;
+
+      @media (max-width:$md4+px) {
+         max-width: 290px;
+         margin: 0 auto 24px auto;
+      }
+
+      @media (min-width:$md3+px) {
+         padding: 24px 16px;
+      }
+
+      @media (min-width:$md2+px) {
+         line-height: 48px;
+      }
+   }
+
 
    .action-block {
       background-color: #000;
@@ -20,38 +54,5 @@
       color: #fff;
       text-align: center;
       padding: 16px 12px;
-      letter-spacing: 1.2;
-
-      p {
-         font-size: 12px;
-         max-width: 100%;
-
-         @media (min-width:$md3+px) {
-            font-size: 14px;
-            color: #00FA9A;
-            padding: 16px;
-         }
-      }
-   }
-
-   .btn {
-      margin-right: 0;
-   }
-}
-
-.section__content {
-   padding: 24px 16px;
-   background-color: #fff;
-   font-style: italic;
-   @include adaptiv-font(36, 20);
-   line-height: 24px;
-   text-align: center;
-
-   @media (max-width:$md3+px) {
-      margin-bottom: 30px;
-   }
-
-   @media (min-width:$md3+px) {
-      line-height: 40px;
    }
 }

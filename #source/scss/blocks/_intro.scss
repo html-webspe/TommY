@@ -1,5 +1,3 @@
-.section {}
-
 .intro {
 
    &__body {
@@ -10,7 +8,9 @@
    }
 
    &__column {
-      flex: 1 1 50%;
+      @media (min-width:$md2+px) {
+         flex: 1 1 50%;
+      }
    }
 
    &__column-l {
@@ -25,7 +25,6 @@
 
       @media (max-width:$md3+px) {
          height: 192px;
-
       }
 
       @media (min-width:$md3+px) and (max-width:$md2+px) {
@@ -37,12 +36,25 @@
       }
    }
 
-   &__column-r {
-
-      padding: 16px 16px 32px 16px;
+   &__leble {
+      font-family: "Formular";
+      font-weight: bold;
+      @include adaptiv-font(24, 14);
+      color: #00FA9A;
+      background: #000000;
+      position: absolute;
+      width: 130px;
+      height: 40px;
+      top: 0;
+      left: 0;
+      text-align: center;
+      line-height: 40px;
 
       @media (min-width:$md3+px) {
-         padding: 40px 10px 56px 40px;
+         top: 24px;
+         height: 80px;
+         width: 242px;
+         line-height: 80px;
       }
    }
 
@@ -53,56 +65,35 @@
 
       @media (min-width:$md3+px) and (max-width:$md2+px) {
          margin-bottom: 23px;
-
       }
 
       @media (min-width:$md3+px) {
-
          width: 168px;
          height: 167px;
       }
 
       @media (min-width:$md2+px) {
-
          margin-bottom: 73px;
       }
    }
 
-   &__leble {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      font-family: "Formular";
-      font-weight: bold;
-      @include adaptiv-font(24, 14);
-
-      color: #00FA9A;
-      background: #000000;
-      position: absolute;
-      width: 130px;
-      height: 40px;
-      top: 0;
-      left: 0;
+   &__column-r {
+      padding: 16px 16px 32px 16px;
 
       @media (min-width:$md3+px) {
-         top: 24px;
-         height: 80px;
-         width: 242px;
+         padding: 40px 10px 56px 40px;
       }
-   }
-
-   &__column-r {
-      font-family: "Source Code Pro";
-      font-weight: normal;
 
       p {
+         font-family: "Source Code Pro";
+         font-weight: normal;
          @include adaptiv-font(18, 12);
-         line-height: 24px;
+         line-height: 16px;
          margin-bottom: 8px;
 
          @media (min-width:$md3+px) {
             margin-bottom: 40px;
+            line-height: 24px;
          }
       }
    }
@@ -114,6 +105,10 @@
 
       @media (max-width:$md3+px) {
          flex-wrap: wrap;
+      }
+
+      @media (min-width:$md2+px) and (max-width:1200px) {
+         font-size: 13px;
       }
 
       li {
@@ -149,15 +144,11 @@
          }
       }
 
-      a {
-         font-family: "Source Code Pro";
-         font-weight: normal;
-         @include adaptiv-font(18, 12);
-         line-height: 24px;
-      }
    }
 
    &__action {
+      margin-bottom: 0;
+
       p {
          font-family: "Formular";
          font-weight: bold;
@@ -165,93 +156,39 @@
          line-height: 32px;
          margin-bottom: 10px;
          text-transform: capitalize !important;
-      }
-   }
-}
 
-
-
-.title {
-   font-family: "Formular";
-   font-weight: bold;
-   @include adaptiv-font(46, 24);
-   line-height: 32px;
-
-   @media (min-width:$md3+px) {
-      line-height: 48px;
-   }
-
-   @media (min-width:$md2+px) {
-      line-height: 56px;
-
-   }
-}
-
-.section-intro {
-
-   .title {
-
-      span {
-         @include adaptiv-font(32, 16);
-         position: relative;
-         display: inline-flex;
-         cursor: pointer;
-
-         &:after {
-            content: 'і';
-            font-size: 12px;
-            line-height: 16px;
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            transform: translateY(-50%);
-            right: -22px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #00FA9A;
-
-            @media (min-width:$md3+px) {
-               width: 24px;
-               height: 24px;
-               line-height: 24px;
-               font-size: 15px;
-               right: -32px;
-            }
+         @media (max-width:$md4+px) {
+            margin-bottom: 4px;
          }
       }
    }
-
 }
 
 .section {
 
    &__bottom {
       height: 64px;
-      background-image: url(../img/Fylh.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: url(../img/sec-bot.svg);
+      background-repeat: repeat;
+      background-size: contain;
       background-position: center;
-
-      @media (max-width:$md3+px) {
-         padding-top: 16px;
-      }
+      align-items: center;
+      display: flex;
    }
 
    &__bottom-text {
       font-family: "Formular";
       font-weight: bold;
       @include adaptiv-font(24, 14);
-      line-height: 64px;
+      line-height: 16px;
       text-align: center;
-      text-transform: capitalize;
+      background-color: #fff;
+      margin: 0 auto;
+      padding: 0 10px;
 
-      @media (max-width:$md3+px) {
-         line-height: 32px;
-      }
-
-      @media (max-width:$md4+px) {
-         line-height: 16px;
+      @media (min-width:$md3+px) {
+         padding: 5px 22px;
+         text-transform: capitalize;
       }
 
 

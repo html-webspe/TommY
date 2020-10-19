@@ -6,23 +6,15 @@ $('.header-menu__icon').click(function (event) {
 });
 
 
-$(window).resize(function (event) {
-	adaptive_function();
-});
-function adaptive_header(w, h) {
-
-	if (w < 600) {
-		$('.body-slider').slick({
+$(window).on('load resize', function () {
+	if ($(window).width() < 768) {
+		$('.body-slider:not(.slick-initialized)').slick({
 			dots: true,
 			infinite: true,
 			speed: 300,
 			arrows: false
 		});
+	} else {
+		$(".body-slider.slick-initialized").slick("unslick");
 	}
-}
-function adaptive_function() {
-	var w = $(window).outerWidth();
-	var h = $(window).outerHeight();
-	adaptive_header(w, h);
-}
-adaptive_function();
+});

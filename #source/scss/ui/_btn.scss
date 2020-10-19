@@ -2,11 +2,10 @@
 .btn {
    display: inline-flex;
    align-items: center;
-   padding: 0px 8px 0px 8px;
+   padding: 0px 10px 0px 10px;
    font-family: "Formular";
-   font-style: normal;
    font-weight: bold;
-   @include adaptiv-font(24, 14);
+   @include adaptiv-font(24, 18);
    height: 56px;
    color: #000000;
    background: #00FA9A;
@@ -16,8 +15,9 @@
       margin-right: 0;
    }
 
-   @media (max-width:$md3+px) {
+   @media (max-width:$md4+px) {
       width: 130px;
+      height: 40px;
    }
 
    @media (min-width:$md3+px) {
@@ -34,6 +34,10 @@
 
    i {
       margin-right: 19px;
+
+      @media (max-width:$md4+px) {
+         margin-right: 9px;
+      }
    }
 }
 

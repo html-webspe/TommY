@@ -1,15 +1,10 @@
-.section-03 {}
-
 .section-03 {
-
    .section-body {
       justify-content: space-between;
    }
 }
 
 .body-item {
-
-
    text-align: center;
 
    @media (min-width:$md3+px) {
@@ -18,31 +13,32 @@
    }
 
    &:first-child {
-      .body-item__step {
-         background: #000;
-         color: #fff;
-      }
-
       .body-item__text {
-         @include adaptiv-font(18, 12);
+         @include adaptiv-font(18, 14);
+         text-align: left;
       }
    }
 
    &__img {
-      margin-bottom: 48px;
-      padding: 0px 40px 0px 40px;
+      margin-bottom: 16px;
 
-      img {
-         max-width: 100%;
+      @media (min-width:$md3+px) {
+         margin-bottom: 48px;
+         padding: 0px 40px 0px 40px;
       }
    }
 
    &__title {
       font-family: "Formular";
       font-weight: bold;
-      @include adaptiv-font(32, 14);
-      line-height: 40px;
+      @include adaptiv-font(32, 24);
+      line-height: 32px;
       margin-bottom: 16px;
+
+
+      @media (max-width:$md3+px) {
+         line-height: 40px;
+      }
    }
 
    &__step {
@@ -50,17 +46,22 @@
       background: #00FA9A;
       font-family: "Source Code Pro";
       font-weight: normal;
-      @include adaptiv-font(24, 14);
-      margin-bottom: 18px;
+      @include adaptiv-font(24, 18);
+      margin-bottom: 16px;
 
-      &.black {}
+      &.black {
+         background: #000;
+         color: #fff;
+      }
    }
 
    &__text {
-      font-family: "Source Code Pro";
-      font-weight: normal;
       @include adaptiv-font(24, 14);
-      line-height: 24px;
+      line-height: 16px;
+
+      @media (min-width:$md4+px) {
+         line-height: 24px;
+      }
    }
 }
 
