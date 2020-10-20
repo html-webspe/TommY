@@ -24,7 +24,7 @@
    }
 
    .action-block {
-      opacity: 0;
+      display: none;
       visibility: hidden;
    }
 }
@@ -116,7 +116,7 @@
          }
 
          .action-block {
-            opacity: 1;
+            display: block;
             visibility: visible;
          }
       }

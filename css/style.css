@@ -462,7 +462,7 @@ textarea.input {
       .header__body {
         height: 96px; } }
   .header .action-block {
-    opacity: 0;
+    display: none;
     visibility: hidden; }
 
 @media (min-width: 767.98px) {
@@ -544,7 +544,7 @@ textarea.input {
         .header-menu.active .nav__item:last-child {
           margin-bottom: 70px; }
       .header-menu.active .action-block {
-        opacity: 1;
+        display: block;
         visibility: visible; } }
   @media (max-width: 767.98px) and (max-width: 767.98px) {
     .header-menu__item {
