@@ -101,4 +101,19 @@
       line-height: 24px;
    }
 
+   &__social {
+      margin-bottom: 18px;
+
+      li {
+         margin-bottom: 10px;
+      }
+
+      a {
+         font-family: "Source Code Pro";
+         font-weight: normal;
+         @include adaptiv-font(18, 14);
+         color: #fff;
+         line-height: 24px;
+      }
+   }
 }

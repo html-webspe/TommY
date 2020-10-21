@@ -149,6 +149,10 @@
    &__action {
       margin-bottom: 0;
 
+      @media (min-width:1500px) {
+         margin: 0;
+      }
+
       p {
          font-family: "Formular";
          font-weight: bold;
@@ -224,4 +228,8 @@
 [data-tooltip]:hover::before {
    opacity: 1;
    top: -1em;
+}
+
+.webp .intro__column-l {
+   background-image: url(../img/intro-bg.webp);
 }

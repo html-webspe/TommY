@@ -26,6 +26,25 @@ $('#up').click(function (event) {
 	$('body,html').animate({ scrollTop: 0 }, 300);
 });
 //==================== <!-- UP --> ========================//
+//====================  testWebP ========================//
+function testWebP(callback) {
+
+	var webP = new Image();
+	webP.onload = webP.onerror = function () {
+		callback(webP.height == 2);
+	};
+	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+
+testWebP(function (support) {
+
+	if (support == true) {
+		document.querySelector('body').classList.add('webp');
+	} else {
+		document.querySelector('body').classList.add('no-webp');
+	}
+});
+//====================  testWebP ========================//
 //====================  ImageBg ========================//
 function ibg() {
 	function isIE() {
@@ -47,8 +66,8 @@ $('.goto').click(function () {
 	var offset = 0;
 	$('body,html').animate({ scrollTop: $('.' + el).offset().top + offset }, 500, function () { });
 
-	if ($('.header-menu__mobile').hasClass('active')) {
-		$('.header-menu__mobile,.header-menu__icon').removeClass('active');
+	if ($('.header-menu').hasClass('active')) {
+		$('.header-menu, .header-menu__icon').removeClass('active');
 		$('body').removeClass('lock');
 	}
 	return false;

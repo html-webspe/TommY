@@ -11,7 +11,10 @@
 
    @media (min-width:$md2+px) {
       line-height: 56px;
+   }
 
+   @media (min-width:1500px) {
+      line-height: 90px;
    }
 }
 

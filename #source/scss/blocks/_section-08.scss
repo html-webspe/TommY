@@ -63,6 +63,9 @@
       line-height: 16px;
       background: #00FA9A;
 
+      @media (min-width:1700px) {
+         line-height: 46px;
+      }
 
    }
 
