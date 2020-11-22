@@ -1,12 +1,70 @@
 .section-10 {
-   .section-body {
-      justify-content: center;
+   .title {
+      @media (min-width:$md2+px) {
+         margin-bottom: 48px;
+      }
+   }
 
-      svg {
-         max-width: 640px;
-         max-height: 424px;
-         width: 100%;
-         height: 100%;
+   @media (min-width:$md3+px) {
+      .section-body {
+         flex-wrap: nowrap;
+      }
+   }
+
+   .section__column {
+      margin-bottom: 32px;
+   }
+
+   p {
+      font-family: 'Formular';
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 16px;
+
+      @media (min-width:$md2+px) {
+         font-size: 32px;
+         line-height: 40px;
+      }
+   }
+
+   .item-section__note {
+      font-family: 'Source Code Pro', monospace;
+      background-color: #00FA9A;
+      font-style: italic;
+
+      @media (max-width:$md3+px) {
+         padding-bottom: 44px;
+      }
+
+      @media (min-width:$md2+px) {
+         line-height: 24px;
+      }
+
+      &:before {
+         background-color: #fff;
+      }
+
+      &:after {
+         background-color: #fff;
+      }
+   }
+
+   .section-body {
+      @media (min-width:$md2+px) {
+         justify-content: space-between;
+      }
+   }
+
+   .section__column-end {
+      @media (min-width:$md3+px) {
+         display: flex;
+         align-items: flex-end;
+      }
+
+      @media (min-width:1300px) {
+         flex: 0 1 39%;
+         width: 39%;
       }
    }
 }

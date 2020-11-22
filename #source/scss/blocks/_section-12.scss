@@ -1,39 +1,79 @@
 .section-12 {
-   border-bottom: 3px solid #000000;
+   .section__column {
+      margin-bottom: 32px;
 
-   .section__text {
-      @media (min-width:$md3+px) {
-         margin-top: 48px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   @media (min-width:$md3+px) {
+      .section-body {
+         flex-wrap: nowrap;
+      }
+   }
+
+   .action-block {
+      p {
+         font-size: 13px;
+         line-height: 20px;
+         margin-bottom: 16px;
       }
    }
 }
 
-.section__column-content {
-   @media (max-width:$md2+px) {
-      margin-bottom: 30px;
-   }
-}
-
-.postitle {
-   margin-left: 10px;
-
-   span {
-      font-style: italic;
+.section {
+   &__list {
       font-weight: normal;
-      @include adaptiv-font(36, 14);
-      line-height: 34px;
-      display: inline;
-      background-color: #00FA9A;
-      -webkit-box-shadow: -10px 0 0 #00FA9A, 10px 0 0 #00FA9A;
-      box-shadow: -10px 0 0 #00FA9A, 10px 0 0 #00FA9A;
-      padding: 8px;
+      font-size: 14px;
+      line-height: 16px;
+      padding-left: 22px;
+
+      @media (min-width:$md3+px) {
+         padding-right: 22px;
+         font-size: 18px;
+         line-height: 32px;
+      }
+
+      @media (min-width:1300px) {
+         @include adaptiv-font(24, 14);
+         font-size: 24px;
+      }
+
+      li {
+         list-style: none;
+         position: relative;
+
+         &:after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: -16px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #000;
+         }
+
+         @media (min-width:1200px) {
+            &:after {
+               top: 16px;
+            }
+         }
+
+         margin-bottom: 16px;
+      }
    }
 
-   @media (min-width:$md3+px) {
-      line-height: 36px;
-   }
+   &__package {
+      margin-bottom: 32px;
 
-   @media (min-width: 1600px) {
-      line-height: 51px;
+      @media (min-width:$md3+px) {
+         margin-bottom: 46px;
+      }
+
+      @media (min-width:$md2+px) {
+         margin-bottom: 102px;
+      }
    }
 }

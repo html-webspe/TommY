@@ -1,18 +1,14 @@
 .section {
    position: relative;
-   padding: 48px 0px 48px 0px;
-
-   @media (min-width:$md3+px) {
-      padding: 87px 0px 80px 0px;
-   }
-}
-
-.section-01 {
+   padding: 64px 0px 64px 0px;
    border-bottom: 3px solid #000000;
-   padding-bottom: 17px;
 
    @media (min-width:$md3+px) {
-      padding-bottom: 37px;
+      padding: 80px 0px 80px 0px;
+   }
+
+   @media (min-width:1300px) {
+      padding: 120px 0px 120px 0px;
    }
 }
 
@@ -36,10 +32,16 @@
 
 .section {
    .title {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
+      max-width: 90%;
 
       @media (min-width:$md3+px) {
          margin-bottom: 48px;
+
+      }
+
+      @media (min-width:1400px) {
+         margin-bottom: 96px;
 
       }
 
@@ -51,19 +53,22 @@
 
    &__item {
       display: flex;
-      margin-bottom: 26px;
+      margin-bottom: 32px;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
 
       @media (min-width:$md3+px) {
          flex: 0 1 50%;
          width: 50%;
-         margin-bottom: 48px;
-         //margin-right: 64px;
-         padding-right: 30px;
+         margin-bottom: 40px;
+         padding-right: 24px;
       }
 
       @media (min-width:1200px) {
-         flex: 0 1 30%;
-         width: 30%;
+         flex: 0 1 33%;
+         width: 33%;
          padding-right: 60px;
       }
 
@@ -103,12 +108,17 @@
       width: 64px;
 
       @media (min-width:$md4+px) {
-         margin-right: 36px;
+         margin-right: 24px;
       }
 
-      @media (min-width:$md3+px) {
+      @media (min-width:$md2+px) {
          flex: 0 0 80px;
          width: 80px;
+
+      }
+
+      img {
+         width: 100%;
       }
 
    }
@@ -116,10 +126,13 @@
    &__item-text {
       font-family: "Source Code Pro";
       font-weight: normal;
-      @include adaptiv-font(18, 14);
+      font-size: 14px;
       line-height: 16px;
 
-      @media (min-width:$md3+px) {
+
+
+      @media (min-width:$md2+px) {
+         font-size: 18px;
          line-height: 24px;
          padding-top: 5px;
       }

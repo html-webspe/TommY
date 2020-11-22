@@ -51,16 +51,12 @@ body {
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
-  max-width: 1440px;
+  max-width: 1313px;
   margin: 0 auto;
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
 
-  @media (min-width:$md3+px) {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
 }
 
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -73,7 +69,6 @@ body {
 
 @import "_vars";
 @import "ui/_ui";
-@import "ui/_forms";
 @import "ui/_btn";
 @import "ui/_slick";
 @import "ui/_up";
@@ -96,7 +91,5 @@ body {
 @import "blocks/_section-11";
 @import "blocks/_section-12";
 @import "blocks/_section-13";
-@import "blocks/_footer";
-
 
 @import "blocks/_footer";

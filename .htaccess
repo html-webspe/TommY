@@ -1,0 +1,6 @@
+DirectoryIndex /qc/index.html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+) $1 [L]
+RewriteCond %{DOCUMENT_ROOT}/qc%{REQUEST_URI} -f
+RewriteRule ^(.+) /qc/$1 [L]

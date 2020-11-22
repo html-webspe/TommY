@@ -1,36 +1,111 @@
-.section {
-   &__list {
-      font-weight: normal;
-      @include adaptiv-font(24, 14);
-      line-height: 16px;
-      margin-bottom: 25px;
-      padding-left: 22px;
+.section-05 {
+   border-bottom: 3px solid #000000;
 
-      @media (min-width:$md3+px) {
-         padding-right: 22px;
-         margin-bottom: 50px;
-         line-height: 32px;
+   .section-body {
+      @media (min-width:$md4+px) {
+         display: flex;
+      }
+   }
 
-         @media (max-width:1200px) {
-            margin-bottom: 90px;
+   .title {
+      margin-bottom: 36px;
+   }
+}
+
+
+.speaker-item {
+   position: relative;
+   margin-bottom: 64px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+
+   @media (min-width:$md4+px) {
+      width: 31%;
+      flex: 0 1 31%;
+      margin-right: 127px;
+      margin-bottom: 0;
+   }
+
+   @media (min-width:1300px) {
+      margin-right: 256px;
+   }
+
+   &:last-child {
+      margin-right: 0;
+   }
+
+   @media (min-width:$md3+px) {
+      &__img {
+         position: relative;
+      }
+
+      &__img-left,
+      &__img-right {
+         &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 120px;
+            width: 1000%;
+            background: url(../img/line.svg) 0 0;
+            background-size: contain;
+         }
+
+      }
+
+      &__img-left {
+         &:after {
+            right: 100%;
          }
       }
 
-      li {
-         list-style: disc;
-         margin-bottom: 16px;
+      &__img-right {
+         &:after {
+            left: 100%;
+         }
       }
    }
 
-   &__package {
-      margin-bottom: 32px;
 
-      @media (min-width:$md3+px) {
-         margin-bottom: 46px;
+   &__name {
+      width: 90%;
+      font-family: "Formular";
+      font-weight: bold;
+      @include adaptiv-font(32, 24);
+      line-height: 32px;
+      background: #00FA9A;
+      margin-bottom: 16px;
+
+      @media (min-width:450px) {
+         //width: 380px;
       }
 
-      @media (min-width:$md2+px) {
-         margin-bottom: 102px;
+      @media (min-width:$md4+px) {
+         font-size: 18px;
+         line-height: 24px;
+      }
+
+      @media (min-width:1700px) {
+         line-height: 40px;
+         margin-bottom: 32px;
+      }
+
+   }
+
+   &__text {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+
+
+      @media (min-width:1300px) {
+         line-height: 32px;
+         max-width: 528px;
       }
    }
+
+
 }

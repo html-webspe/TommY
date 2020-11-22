@@ -1,33 +1,117 @@
 .section-09 {
-   border-bottom: 3px solid #000000;
+   .title {
+      margin-bottom: 68px;
+   }
+}
 
-   .section__item {
-      @media (min-width:$md3+px) {
-         flex: 0 1 45%;
-         width: 45%;
-         padding: 0;
-         margin-right: 32px;
+.reviews__body {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+
+   @media (max-width:$md4+px) {
+      justify-content: center;
+   }
+
+   @media (min-width:$md3+px) {
+
+      &:after,
+      &:before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         background-image: url(../img/section-09/line.svg);
+         width: 100%;
+         height: 338px;
       }
 
-      &:nth-child(even) {
-         margin-right: 0;
+      &:after {
+         right: 100%;
       }
 
-      &:last-child {
-         margin-bottom: 0;
+      &:before {
+         left: 100%;
+      }
+   }
+}
+
+.reviews__item {
+   @media (max-width:$md3+px) {
+      display: none;
+   }
+}
+
+.reviews__item-center {
+   background-image: url(../img/section-09/02.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 427px;
+   flex: 0 0 207px;
+   width: 207px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-width: 0;
+
+   @media (min-width:$md3+px) {
+      margin-right: 76px;
+      margin-left: 76px;
+   }
+
+   @media (min-width:$md2+px) {
+      height: 760px;
+      width: 380px;
+      flex: 0 0 380px;
+   }
+}
+
+.reviews-slider {
+   min-width: 0;
+   width: 85%;
+   height: 90%;
+
+   .slick-arrow {
+      position: absolute;
+      top: 50%;
+      background-image: url(../img/section-09/arrow-mob.svg);
+
+      width: 36px;
+      height: 30px;
+      font-size: 0;
+      background-color: transparent;
+      z-index: 1;
+
+      @media (min-width:1200px) {
+         width: 64px;
+         height: 48px;
+         background-image: url(../img/section-09/arrow.svg);
       }
    }
 
-   .section__item-title {
-      font-family: "Formular";
-      font-weight: bold;
-      @include adaptiv-font(32, 18);
-      line-height: 40px;
+   .slick-prev {
+      left: -60px;
+
+      @media (min-width:1200px) {
+         left: -140px;
+      }
    }
 
-   .section__item-content {
-      display: flex;
-      flex-direction: column;
-      @include adaptiv-font(18, 12);
+   .slick-next {
+      transform: rotate(180deg);
+      right: -60px;
+
+      @media (min-width:1200px) {
+         right: -140px;
+      }
+   }
+}
+
+.reviews-slider__item {
+   img {
+      border-radius: 30px;
+      width: 100%;
    }
 }

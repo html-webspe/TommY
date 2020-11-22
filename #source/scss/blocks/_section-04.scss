@@ -1,100 +1,174 @@
-.slider-section__bg {
-   height: 704px !important;
-
-   @media (max-width:$md3+px) {
-      height: 340px !important;
-   }
-}
-
 .section-04 {
-   padding-top: 0;
-   padding-bottom: 0;
+   padding-bottom: 40px;
+   border-bottom: 3px solid #000000;
 
-   .title {
-      margin-left: 10px;
-      margin-bottom: 42px;
+   .section__column {
+      margin-bottom: 32px;
 
-      span {
-         display: inline;
-         background-color: #00FA9A;
-         box-shadow: -10px 0 0 #00FA9A, 10px 0 0 #00FA9A;
-         padding: 8px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   .section__list {
+      line-height: 22px;
+
+      @media (min-width:$md2+px) {
          line-height: 40px;
       }
    }
+
+
+   .section__list li {
+      margin-bottom: 15px;
+   }
 }
 
-.section-inside {
+.section__column {
+   min-width: 0;
+}
+
+.item-slider__head {
+   font-family: "Formular";
+   font-weight: bold;
+   @include adaptiv-font(32, 16);
+   line-height: 34px;
+   text-align: center;
+   margin-bottom: 40px;
+   padding: 0 40px;
+
+   @media (max-width:$md4+px) {
+      margin-bottom: 24px;
+      line-height: 26px;
+   }
+
+   @media (min-width:$md2+px) {
+      line-height: 40px;
+   }
+}
+
+.module-slider__item {
+   li {
+      ul {
+         margin-left: 16px;
+         margin-top: 16px;
+
+         li {
+            list-style: none;
+            position: relative;
+
+            @media (min-width:$md3+px) {
+               font-size: 14px;
+            }
+
+            @media (min-width:1200px) {
+               font-size: 18px;
+            }
+
+            &:after {
+               content: '';
+               position: absolute;
+               top: 8px;
+               left: -16px;
+               width: 8px;
+               height: 8px;
+               border-radius: 50%;
+               background: #BDBDBD;
+
+               @media (min-width:$md3+px) {
+                  top: 16px;
+               }
+            }
+         }
+      }
+   }
+}
+
+.section__column {
+   position: relative;
+}
+
+.module-slider__body {
+   min-width: 0;
+}
+
+.control-module-slider__arrow {
    position: absolute;
-   top: 22px;
-   left: 16px;
+   top: 5px;
+   cursor: pointer;
 
-   @media (min-width:$md3+px) {
-      top: 72px;
-      left: 64px;
+   &-prev {
+      left: 0;
+   }
+
+   &-next {
+      right: 0;
    }
 }
 
-.inside-slider {
-   width: 288px;
-   height: 168px;
-   border: 3px solid #000;
-   background: #FFFFFF;
 
-   @media (min-width:$md3+px) {
-      width: 558px;
-      height: 312px;
-      border: 6px solid #000;
+
+.module-slider-r {
+   margin-left: 40px;
+   margin-top: -14px;
+
+   @media (max-width:$md4+px) {
+      margin-left: 52px;
+      margin-right: 46px;
+      margin-top: 0;
    }
 
-   .slick-dots {
-      display: flex;
-      position: absolute;
-      bottom: 30px;
-      right: 23px;
+   .slick-slider .slick-dots li button {
+      width: 52px;
+      height: 72px;
+      background: #00FA9A;
+      border-radius: inherit;
+
+   }
+
+   .slick-slider .slick-dots {
+      bottom: 0;
+      right: -59%;
+   }
+
+   .slick-active {
+      background: #000;
+      color: #fff;
+   }
+
+   .module-slider__control {
+      display: none;
+      visibility: hidden;
 
       @media (max-width:$md4+px) {
-         right: auto;
-         left: 50%;
-         transform: translateX(-50%);
+         display: block;
+         visibility: visible;
       }
    }
+}
 
-   li {
-      margin-right: 10px;
+.module-slider__body-r {
+   display: flex;
 
-      &:last-child {
-         margin-right: 0;
-      }
 
-      button {
-         width: 8px;
-         height: 8px;
-         background: #00FA9A;
-         border-radius: 50%;
-         font-size: 0;
+}
 
-         @media (min-width:$md3+px) {
-            width: 16px;
-            height: 16px;
-         }
-      }
+.item-slider-r {
+   font-family: "Formular";
+   font-weight: bold;
+   font-size: 32px;
+   line-height: 72px;
+   width: 52px;
+   height: 72px;
+   background: #00FA9A;
+   margin-right: 16px;
+   text-align: center;
+   cursor: pointer;
 
-      &.slick-active {
-         button {
-            background: #000;
-         }
-      }
-   }
-
-   &__text {
-      padding: 16px;
-      @include adaptiv-font(24, 12);
-      line-height: 16px;
-
-      @media (min-width:$md3+px) {
-         line-height: 32px;
-         padding: 23px;
-      }
+   @media (max-width:$md3+px) {
+      font-size: 14px;
+      line-height: 45px;
+      width: 24px;
+      height: 45px;
    }
 }
